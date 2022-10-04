@@ -8,7 +8,7 @@ import { fetchCountries} from "./js/fetchCountries"
 
 const DEBOUNCE_DELAY = 300;
 
-function targetElement(e){
+function targetElement(){
 let target = reft.input.value.trim();
 if(target === ""){
     reft.list.innerHTML = "";
@@ -25,13 +25,13 @@ fetchCountries(target).then(countries =>{
     }
 
  if(countries.length > 1 && countries.length <= 10){
+  
     const map = countries.map(count =>  showCountryList(count));
     reft.list.innerHTML = map.join(' ');
     reft.info.innerHTML = "";
  }
 if(countries.length === 1){
-    const country = countries.map(count => showCountryCard(count))
-    
+    const country = countries.map(e => showCountryCard(e));
     reft.list.innerHTML = "";
     reft.info.innerHTML = country.join();
 }

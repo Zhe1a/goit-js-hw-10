@@ -6,12 +6,11 @@
 }
 
 export function showCountryCard({flags, name, capital, population, languages}) {
-    return `
-    <div class="country">
-    <img class = "capital-flag" src="${flags.svg}" alt="${name.official}" width = 100/>
-    <h2>Country: ${name.official}</h2>
-    <p>Capital: ${capital}</p>
-    <p>Population: ${population}</p>
-    <p>Languages: ${Object.values(languages)}</p>
-  </div>`
+    return `<div class="country">
+      <img class = "capital-flag" src="${flags.svg}" alt="${name.official}" width = 100/>
+      <h2>Country: ${name.official}</h2>
+      <p>Capital: ${capital}</p>
+      <p>Population: ${population}</p>
+      <p>Languages: ${Object.values(languages)}</p>
+    </div>`
 }
